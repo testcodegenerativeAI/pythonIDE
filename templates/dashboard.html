@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .tick {
+            color: green;
+            font-size: 1.2rem;
+            margin-left: 5px;
+        }
+        .progress-bar {
+            height: 20px;
+            background-color: #088432;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Dashboard</h1>
+        <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" style="width: {{ completed_count / total_count * 100 }}%" aria-valuenow="{{ completed_count / total_count * 100 }}" aria-valuemin="0" aria-valuemax="100">{{ completed_count }}/{{ total_count }} Problems Solved</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Check Palindrome</h5>
+                        <p class="card-text">Check if a string is palindrome or not</p>
+                        <a href="{{url_for('palindrome',nbr=1)}}" class="btn btn-primary">Go to Check Palindrome</a>
+                        {% if completed_programs['check_palindrome'] %}
+                            <i class="fas fa-check tick"></i>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Count Vowels</h5>
+                        <p class="card-text">Count Number of vowels in string</p>
+                        <a href="{{url_for('vowels',nbr=2)}}" class="btn btn-primary">Go to Count Vowels</a>
+                        {% if completed_programs['count_vowels'] %}
+                            <i class="fas fa-check tick"></i>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Factorial</h5>
+                        <p class="card-text">Solve the factorial problem</p>
+                        <a href="{{url_for('factorial',nbr=3)}}" class="btn btn-primary">Go to Factorial</a>
+                        {% if completed_programs['factorial'] %}
+                            <i class="fas fa-check tick"></i>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sum of List</h5>
+                        <p class="card-text">Solve the sum of list elements problem</p>
+                        <a href="{{url_for('sum_list',nbr=4)}}" class="btn btn-primary">Go to Sum of List</a>
+                        {% if completed_programs['sum_list'] %}
+                            <i class="fas fa-check tick"></i>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Reverse String</h5>
+                        <p class="card-text">Solve the reverse string problem</p>
+                        <a href="{{url_for('reverse_string',nbr=5)}}" class="btn btn-primary">Go to Reverse String</a>
+                        {% if completed_programs['reverse_string'] %}
+                            <i class="fas fa-check tick"></i>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>

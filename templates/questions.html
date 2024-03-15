@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Problem</title>
+    <!-- Include CodeMirror library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <!-- Include CodeMirror Dracula theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/theme/dracula.min.css">
+    <!-- Include CodeMirror Python mode -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/python/python.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #272727;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        label {
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 80%;
+            min-height: 300px;
+            font-size: 1rem;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #333;
+            color: #fff;
+            resize: none;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #555;
+            color: white;
+        }
+        .success {
+            color: #4CAF50;
+        }
+        .failed {
+            color: #f44336;
+        }
+        .error {
+            color: #ff9800;
+        }
+        .completed {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    {% if nbr == '1' %}
+    <h1>{{heading}}</h1>
+    <h2><b style="color: #307734;">Problem Statement</b></h2>
+    <p>{{ps}}</p>
+    <br>
+    <p> <b style="color: #5cee5c;">Input: </b>{{i}}</p>
+    <p> <b style="color: #5cee5c;">Output: </b>{{o}}</p>
+    <p><b style="color: #5cee5c;">Explaination: </b>{{ex}}</p>
+    
+    <form action="{{url_for('palindrome',nbr=1)}}" method="post">
+        <label for="code">Your Solution:</label><br>
+        <textarea id="code" name="code" rows="10" cols="50">{{user_code}}</textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if results %}
+    <h2>Results</h2>
+    <table>
+        <tr>
+            <th>Test Input</th>
+            <th>User's Output</th>
+            <th>Expected Output</th>
+            <th>Status</th>
+        </tr>
+        {% for test_input, user_output, expected_output, status in results %}
+        <tr>
+            <td>{{ test_input }}</td>
+            <td>{{ user_output }}</td>
+            <td>{{ expected_output }}</td>
+            <td class="{{ status }}">{{ status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    {% if completed %}
+        <p class="completed">Completed!</p>
+    {% endif %}
+    {% endif %}
+
+
+
+    {% if nbr == '2' %}
+    <h1>{{heading}}</h1>
+    <h2><b style="color: #307734;">Problem Statement</b></h2>
+    <p>{{ps}}</p>
+    <br>
+    <p> <b style="color: #5cee5c;">Input: </b>{{i}}</p>
+    <p> <b style="color: #5cee5c;">Output: </b>{{o}}</p>
+    <p><b style="color: #5cee5c;">Explaination: </b>{{ex}}</p>
+    <form action="{{url_for('vowels',nbr=2)}}" method="post">
+        <label for="code">Your Solution:</label><br>
+        <textarea id="code" name="code" rows="10" cols="50">{{user_code}}
+        </textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if results %}
+    <h2>Results</h2>
+    <table>
+        <tr>
+            <th>Test Input</th>
+            <th>User's Output</th>
+            <th>Expected Output</th>
+            <th>Status</th>
+        </tr>
+        {% for test_input, user_output, expected_output, status in results %}
+        <tr>
+            <td>{{ test_input }}</td>
+            <td>{{ user_output }}</td>
+            <td>{{ expected_output }}</td>
+            <td class="{{ status }}">{{ status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    {% if completed %}
+        <p class="completed">Completed!</p>
+    {% endif %}
+    {% endif %}
+
+
+    {% if nbr == '3' %}
+    <h1>{{heading}}</h1>
+    <h2><b style="color: #307734;">Problem Statement</b></h2>
+    <p>{{ps}}</p>
+    <br>
+    <p> <b style="color: #5cee5c;">Input: </b>{{i}}</p>
+    <p> <b style="color: #5cee5c;">Output: </b>{{o}}</p>
+    <p><b style="color: #5cee5c;">Explaination: </b>{{ex}}</p>
+    <form action="{{url_for('factorial',nbr=3)}}" method="post">
+        <label for="code">Your Solution:</label><br>
+        <textarea id="code" name="code" rows="10" cols="50">{{user_code}}</textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if results %}
+    <h2>Results</h2>
+    <table>
+        <tr>
+            <th>Test Input</th>
+            <th>User's Output</th>
+            <th>Expected Output</th>
+            <th>Status</th>
+        </tr>
+        {% for test_input, user_output, expected_output, status in results %}
+        <tr>
+            <td>{{ test_input }}</td>
+            <td>{{ user_output }}</td>
+            <td>{{ expected_output }}</td>
+            <td class="{{ status }}">{{ status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    {% if completed %}
+        <p class="completed">Completed!</p>
+    {% endif %}
+    {% endif %}
+    
+
+
+
+    {% if nbr == '4' %}
+    <h1>{{heading}}</h1>
+    <h2><b style="color: #307734;">Problem Statement</b></h2>
+    <p>{{ps}}</p>
+    <br>
+    <p> <b style="color: #5cee5c;">Input: </b>{{i}}</p>
+    <p> <b style="color: #5cee5c;">Output: </b>{{o}}</p>
+    <p><b style="color: #5cee5c;">Explaination: </b>{{ex}}</p>
+    <form action="{{url_for('sum_list',nbr=4)}}" method="post">
+        <label for="code">Your Solution:</label><br>
+        <textarea id="code" name="code" rows="10" cols="50">{{user_code}}</textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if results %}
+    <h2>Results</h2>
+    <table>
+        <tr>
+            <th>Test Input</th>
+            <th>User's Output</th>
+            <th>Expected Output</th>
+            <th>Status</th>
+        </tr>
+        {% for test_input, user_output, expected_output, status in results %}
+        <tr>
+            <td>{{ test_input }}</td>
+            <td>{{ user_output }}</td>
+            <td>{{ expected_output }}</td>
+            <td class="{{ status }}">{{ status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    {% if completed %}
+        <p class="completed">Completed!</p>
+    {% endif %}
+    {% endif %}
+
+
+
+    {% if nbr == '5' %}
+    <h1>{{heading}}</h1>
+    <h2><b style="color: #307734;">Problem Statement</b></h2>
+    <p>{{ps}}</p>
+    <br>
+    <p> <b style="color: #5cee5c;">Input: </b>{{i}}</p>
+    <p> <b style="color: #5cee5c;">Output: </b>{{o}}</p>
+    <p><b style="color: #5cee5c;">Explaination: </b>{{ex}}</p>
+    <form action="{{url_for('reverse_string',nbr=5)}}" method="post">
+        <label for="code">Your Solution:</label><br>
+        <textarea id="code" name="code" rows="10" cols="50">{{user_code}}</textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if results %}
+    <h2>Results</h2>
+    <table>
+        <tr>
+            <th>Test Input</th>
+            <th>User's Output</th>
+            <th>Expected Output</th>
+            <th>Status</th>
+        </tr>
+        {% for test_input, user_output, expected_output, status in results %}
+        <tr>
+            <td>{{ test_input }}</td>
+            <td>{{ user_output }}</td>
+            <td>{{ expected_output }}</td>
+            <td class="{{ status }}">{{ status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    {% if completed %}
+        <p class="completed">Completed!</p>
+    {% endif %}
+    {% endif %}
+
+
+
+    
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            mode: "python",
+            theme: "dracula",
+            lineNumbers: true
+        });
+    </script>
+</body>
+
+</html>
