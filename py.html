@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+
+.hoverable-item:hover {
+  background-color: lightgray;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+
+    </style>
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('home')}}">Home </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Categories</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            {% if user %}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav><br>
+
+<div class="container-fluid">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+       <div class="row">
+        <div class="col-md-6">
+        <h2 style="display: inline;"><u>Introduction to Python Concepts</u></h2>
+      </div>
+      <div class="col-md-2 offset-md-4">
+        <h3 style="display: inline;  color: green;">Progress: 35%</h3>
+      </div>
+      </div>
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Basics
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+            <ul>
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Variables</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red; ">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set 1</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set 2</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Data Types</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red; ">Pending</span>
+                </div>
+              </div><br>
+              
+              <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set 2</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+              
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: circle;">Decision Statement</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red; ">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set 2</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set 3</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 1</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div>
+
+              </ul>
+            </div>
+          </div>
+          <h2 class="accordion-header" id="headingtwo">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+              Loops
+            </button>
+          </h2>
+          <div id="collapsetwo" class="accordion-collapse collapse show" aria-labelledby="headingtwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Loops</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set Part 1</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+              <li style="list-style-type: square;">Practice set Part 2</li>
+            </div>
+            <div class="col-md-2 offset-md-4">
+              <span style="color: red;">Pending</span>
+            </div>
+          </div><br>
+          <div class="row hoverable-item">
+          <div class="col-md-6">
+            <li style="list-style-type: square;">Practice set Part 3</li>
+          </div>
+          <div class="col-md-2 offset-md-4">
+            <span style="color: red;">Pending</span>
+          </div>
+        </div><br>
+        <div class="row hoverable-item">
+        <div class="col-md-6">
+          <li style="list-style-type: square;">Practice set Part 4</li>
+        </div>
+        <div class="col-md-2 offset-md-4">
+          <span style="color: red;">Pending</span>
+        </div>
+      </div><br>
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Break Continue</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set Part 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                        <li style="list-style-type: square;">Practice set Part 3</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 3</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              </ul>
+            </div>
+          </div>
+          <h2 class="accordion-header" id="headingthree">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+              Functions
+            </button>
+          </h2>
+          <div id="collapsethree" class="accordion-collapse collapse show" aria-labelledby="headingthree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Functions</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set 1</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set 3</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set 4</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Lambda</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+  
+              <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set 2</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 1</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 3</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+            
+              </ul>
+            </div>
+          </div>
+		  <h2 class="accordion-header" id="headingfour">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+              Data Structures
+            </button>
+          </h2>
+          <div id="collapsefour" class="accordion-collapse collapse show" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">List</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set Part 1</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+              <li style="list-style-type: square;">Practice set Part 2</li>
+            </div>
+            <div class="col-md-2 offset-md-4">
+              <span style="color: red;">Pending</span>
+            </div>
+          </div><br>
+          <div class="row hoverable-item">
+          <div class="col-md-6">
+            <li style="list-style-type: square;">Practice set Part 3</li>
+          </div>
+          <div class="col-md-2 offset-md-4">
+            <span style="color: red;">Pending</span>
+          </div>
+        </div><br>
+
+				<div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">List Comprehension</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set Part 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                        <li style="list-style-type: square;">Practice set Part 3</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+				<div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Copies and deep copies</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: circle;">Link Lists</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: circle;">Tuples</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                        <li style="list-style-type: square;">Practice set</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+                    <div class="row hoverable-item">
+                      <div class="col-md-6">
+                        <li style="list-style-type: circle;">Dictionaries</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+                    <div class="row hoverable-item">
+                      <div class="col-md-6">
+                          <li style="list-style-type: square;">Practice set 1</li>
+                        </div>
+                        <div class="col-md-2 offset-md-4">
+                          <span style="color: red;">Pending</span>
+                        </div>
+                      </div><br>
+                      <div class="row hoverable-item">
+                        <div class="col-md-6">
+                            <li style="list-style-type: square;">Practice set 2</li>
+                          </div>
+                          <div class="col-md-2 offset-md-4">
+                            <span style="color: red;">Pending</span>
+                          </div>
+                        </div><br>
+                        <div class="row hoverable-item">
+                          <div class="col-md-6">
+                              <li style="list-style-type: square;">Practice set 3</li>
+                            </div>
+                            <div class="col-md-2 offset-md-4">
+                              <span style="color: red;">Pending</span>
+                            </div>
+                          </div><br>
+                      <div class="row hoverable-item">
+                        <div class="col-md-6">
+                          <li style="list-style-type: circle;">Sets</li>
+                        </div>
+                        <div class="col-md-2 offset-md-4">
+                          <span style="color: red;">Pending</span>
+                        </div>
+                      </div><br>
+                      <div class="row hoverable-item">
+                        <div class="col-md-6">
+                            <li style="list-style-type: square;">Practice set 1</li>
+                          </div>
+                          <div class="col-md-2 offset-md-4">
+                            <span style="color: red;">Pending</span>
+                          </div>
+                        </div><br>
+                        <div class="row hoverable-item">
+                          <div class="col-md-6">
+                              <li style="list-style-type: square;">Practice set 2</li>
+                            </div>
+                            <div class="col-md-2 offset-md-4">
+                              <span style="color: red;">Pending</span>
+                            </div>
+                          </div><br>
+                        <div class="row hoverable-item">
+                          <div class="col-md-6">
+                            <li style="list-style-type: circle;">Map, Filters, All, Any</li>
+                          </div>
+                          <div class="col-md-2 offset-md-4">
+                            <span style="color: red;">Pending</span>
+                          </div>
+                        </div><br>
+                        <div class="row hoverable-item">
+                          <div class="col-md-6">
+                              <li style="list-style-type: square;">Practice set 1</li>
+                            </div>
+                            <div class="col-md-2 offset-md-4">
+                              <span style="color: red;">Pending</span>
+                            </div>
+                          </div><br>
+
+                          <div class="row hoverable-item">
+                            <div class="col-md-6">
+                                <li style="list-style-type: square;">Practice set 2</li>
+                              </div>
+                              <div class="col-md-2 offset-md-4">
+                                <span style="color: red;">Pending</span>
+                              </div>
+                            </div><br>
+                        
+                            <div class="row hoverable-item">
+                              <div class="col-md-6">
+                                  <li style="list-style-type: square;">Practice set 3</li>
+                                </div>
+                                <div class="col-md-2 offset-md-4">
+                                  <span style="color: red;">Pending</span>
+                                </div>
+                              </div><br>
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 3</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 4</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 5</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 6</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 7</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              </ul>
+            </div>
+          </div>
+		  <h2 class="accordion-header" id="headingfive">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+              String Operations
+            </button>
+          </h2>
+          <div id="collapsefive" class="accordion-collapse collapse show" aria-labelledby="headingfive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">upper(), lower(), isdigit, isalnum, isdecimal, isalpha</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set Part 1</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set Part 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Index, find, count, endswith, startswith, rstrip, rsplit, join</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set Part 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                        <li style="list-style-type: square;">Practice set Part 3</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+                
+                    <div class="row hoverable-item">
+                      <div class="col-md-6">
+                        <li style="list-style-type: circle;">Regex commands</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+                    <div class="row hoverable-item">
+                      <div class="col-md-6">
+                          <li style="list-style-type: square;">Practice set Part 1</li>
+                        </div>
+                        <div class="col-md-2 offset-md-4">
+                          <span style="color: red;">Pending</span>
+                        </div>
+                      </div><br>
+                      <div class="row hoverable-item">
+                        <div class="col-md-6">
+                            <li style="list-style-type: square;">Practice set Part 2</li>
+                          </div>
+                          <div class="col-md-2 offset-md-4">
+                            <span style="color: red;">Pending</span>
+                          </div>
+                        </div><br>
+                        <div class="row hoverable-item">
+                          <div class="col-md-6">
+                              <li style="list-style-type: square;">Practice set Part 3</li>
+                            </div>
+                            <div class="col-md-2 offset-md-4">
+                              <span style="color: red;">Pending</span>
+                            </div>
+                          </div><br>
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              </ul>
+            </div>
+          </div>
+		  <h2 class="accordion-header" id="headingsix">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+              Date Operations
+            </button>
+          </h2>
+          <div id="collapsesix" class="accordion-collapse collapse show" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Current date and time </li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part I</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: circle;">datediff, date generation </li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set Part I</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: circle;">Sleep</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                        <li style="list-style-type: square;">Practice set Part I</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              </ul>
+            </div>
+          </div>
+		            <h2 class="accordion-header" id="headingseven">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#headingseven" aria-expanded="true" aria-controls="headingseven">
+              Arguments
+            </button>
+          </h2>
+          <div id="headingseven" class="accordion-collapse collapse show" aria-labelledby="headingseven" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Passing function as object</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set 1</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Passing function as arguments</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+  
+              <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: circle;">Returning values/functions</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+    
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div></div><br>
+
+
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 1</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+            
+              </ul>
+            </div>
+          </div>
+		  <h2 class="accordion-header" id="headingeight">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="true" aria-controls="collapseeight">
+              File Operations
+            </button>
+          </h2>
+          <div id="collapseeight" class="accordion-collapse collapse show" aria-labelledby="headingeight" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">File read and Write</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set Part 1</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set Part 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              </ul>
+            </div>
+          </div>
+		            <h2 class="accordion-header" id="headingnine">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenine" aria-expanded="true" aria-controls="collapsenine">
+              OOPs
+            </button>
+          </h2>
+          <div id="collapsenine" class="accordion-collapse collapse show" aria-labelledby="headingnine" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Classes</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set 1</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Inheritance,Abstraction,Encapsulation, Polymorphism</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+  
+              <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set 2</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set 3</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                    <li style="list-style-type: circle;">Public and private variables and classes</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+    
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: circle;">Methods</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+      
+                  <div class="row hoverable-item">
+                      <div class="col-md-6">
+                        <li style="list-style-type: square;">Practice set 1</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+                    <div class="row hoverable-item">
+                      <div class="col-md-6">
+                        <li style="list-style-type: square;">Practice set 2</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 1</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 3</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 4</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: square;">Assessment 5</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+            
+              </ul>
+            </div>
+          </div>
+		  <h2 class="accordion-header" id="headingten">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseten" aria-expanded="true" aria-controls="collapseten">
+              Modules and Virtual Environment
+            </button>
+          </h2>
+          <div id="collapseten" class="accordion-collapse collapse show" aria-labelledby="headingten" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Module Creation</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set Part 1</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set Part 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Vierual Environment Creation</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set Part 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              </ul>
+            </div>
+          </div>
+          <h2 class="accordion-header" id="headingten">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseten" aria-expanded="true" aria-controls="collapseten">
+              Exception Handling
+            </button>
+          </h2>
+          <div id="collapseten" class="accordion-collapse collapse show" aria-labelledby="headingten" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Try catch except</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set Part 1</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set Part 2</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part 3</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Implementation by examples</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 3</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              </ul>
+            </div>
+          </div>
+          <h2 class="accordion-header" id="headingten">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseten" aria-expanded="true" aria-controls="collapseten">
+              Decorators and Iterators
+            </button>
+          </h2>
+          <div id="collapseten" class="accordion-collapse collapse show" aria-labelledby="headingten" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Iterator</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set Part 1</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Using Decorators for enhancing functions</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set Part 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: circle;">Multithreading and multiprocessing</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                        <li style="list-style-type: square;">Practice set Part 1</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+                    <div class="row hoverable-item">
+                      <div class="col-md-6">
+                          <li style="list-style-type: square;">Practice set Part 2</li>
+                        </div>
+                        <div class="col-md-2 offset-md-4">
+                          <span style="color: red;">Pending</span>
+                        </div>
+                      </div><br>
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              </ul>
+            </div>
+          </div>
+          <h2 class="accordion-header" id="headingten">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseten" aria-expanded="true" aria-controls="collapseten">
+              Pandas
+            </button>
+          </h2>
+          <div id="collapseten" class="accordion-collapse collapse show" aria-labelledby="headingten" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Reading csv/excel</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set Part 1</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Data manipulation in Pandas</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set Part 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                        <li style="list-style-type: square;">Practice set Part 3</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+                    <div class="row hoverable-item">
+                      <div class="col-md-6">
+                        <li style="list-style-type: circle;">Aggregation in pandas</li>
+                      </div>
+                      <div class="col-md-2 offset-md-4">
+                        <span style="color: red;">Pending</span>
+                      </div>
+                    </div><br>
+                    <div class="row hoverable-item">
+                      <div class="col-md-6">
+                          <li style="list-style-type: square;">Practice set Part 1</li>
+                        </div>
+                        <div class="col-md-2 offset-md-4">
+                          <span style="color: red;">Pending</span>
+                        </div>
+                      </div><br>
+                      <div class="row hoverable-item">
+                        <div class="col-md-6">
+                            <li style="list-style-type: square;">Practice set Part 2</li>
+                          </div>
+                          <div class="col-md-2 offset-md-4">
+                            <span style="color: red;">Pending</span>
+                          </div>
+                        </div><br>
+                        <div class="row hoverable-item">
+                          <div class="col-md-6">
+                              <li style="list-style-type: square;">Practice set Part 3</li>
+                            </div>
+                            <div class="col-md-2 offset-md-4">
+                              <span style="color: red;">Pending</span>
+                            </div>
+                          </div><br>
+                          <div class="row hoverable-item">
+                            <div class="col-md-6">
+                              <li style="list-style-type: circle;">Using Pandasql with Pandas</li>
+                            </div>
+                            <div class="col-md-2 offset-md-4">
+                              <span style="color: red;">Pending</span>
+                            </div>
+                          </div><br>
+                          <div class="row hoverable-item">
+                            <div class="col-md-6">
+                                <li style="list-style-type: square;">Practice set Part 1</li>
+                              </div>
+                              <div class="col-md-2 offset-md-4">
+                                <span style="color: red;">Pending</span>
+                              </div>
+                            </div><br>
+                            <div class="row hoverable-item">
+                              <div class="col-md-6">
+                                  <li style="list-style-type: square;">Practice set Part 2</li>
+                                </div>
+                                <div class="col-md-2 offset-md-4">
+                                  <span style="color: red;">Pending</span>
+                                </div>
+                              </div><br>
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 3</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 4</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              </ul>
+            </div>
+          </div>
+          <h2 class="accordion-header" id="headingten">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseten" aria-expanded="true" aria-controls="collapseten">
+              Numpy
+            </button>
+          </h2>
+          <div id="collapseten" class="accordion-collapse collapse show" aria-labelledby="headingten" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <ul style="list-style-type: lower-alpha;">
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Numpy array creation</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+            <div class="col-md-6">
+                <li style="list-style-type: square;">Practice set Part 1</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+                <div class="col-md-6">
+                  <li style="list-style-type: circle;">Numpy shape, slice, index, join, sort, filter</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part 1</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                  <div class="col-md-6">
+                      <li style="list-style-type: square;">Practice set Part 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                <li style="list-style-type: circle;">Numpy simple ufuncs</li>
+              </div>
+              <div class="col-md-2 offset-md-4">
+                <span style="color: red;">Pending</span>
+              </div>
+            </div><br>
+            <div class="row hoverable-item">
+              <div class="col-md-6">
+                  <li style="list-style-type: square;">Practice set Part 1</li>
+                </div>
+                <div class="col-md-2 offset-md-4">
+                  <span style="color: red;">Pending</span>
+                </div>
+              </div><br>
+              <div class="row hoverable-item">
+                <div class="col-md-6">
+                    <li style="list-style-type: square;">Practice set Part 2</li>
+                  </div>
+                  <div class="col-md-2 offset-md-4">
+                    <span style="color: red;">Pending</span>
+                  </div>
+                </div><br>
+                <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 1</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+                  <div class="row hoverable-item">
+                    <div class="col-md-6">
+                      <li style="list-style-type: square;">Assessment 2</li>
+                    </div>
+                    <div class="col-md-2 offset-md-4">
+                      <span style="color: red;">Pending</span>
+                    </div>
+                  </div><br>
+              </ul>
+            </div>
+          </div>
+      
+        </div>
+    </div>
+       
+</div>
+
+
+
+<!-- Bootstrap 4 JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>
